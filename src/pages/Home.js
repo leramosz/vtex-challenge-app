@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-import { Title } from '../components/Title'
-import { SearchForm } from '../components/SearchForm'
+//import { Title } from '../components/Title'
 import { MoviesList } from '../components/MoviesList'
 
 export class Home extends Component {
@@ -11,7 +10,6 @@ export class Home extends Component {
     fetch(`http://localhost:3030/movies`)
       .then(res => res.json())
       .then(movies => {
-        console.log({ movies })
         this.setState({ movies })
       })
   }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { ButtonBackToHome } from '../components/ButtonBackToHome'
 
-export class Detail extends Component {
+export class MovieDetail extends Component {
   static propTypes = {
     match: PropTypes.shape({
       params: PropTypes.object,
@@ -19,13 +19,11 @@ export class Detail extends Component {
     fetch(`http://localhost:3030/movies/${id}`)
       .then(res => res.json())
       .then(movie => {
-        console.log({ movie })
         this.setState({ movie })
       })
   }
 
   componentDidMount () {
-    console.log(this.props)
     const { movieId } = this.props.match.params
     this._fetchMovie({ id: movieId })
   }
@@ -37,7 +35,7 @@ export class Detail extends Component {
       <div>
         <ButtonBackToHome />
         <h1>{title}</h1>
-        <img src={image} />
+        <img src={image} alt="title"/>
         <p>{year}</p>
         <p>{duration}</p>
         <p>{rating}</p>

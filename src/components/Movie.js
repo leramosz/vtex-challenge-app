@@ -7,7 +7,7 @@ export class Movie extends Component {
   static propTypes = {
     id: PropTypes.string,
     title: PropTypes.string,
-    year: PropTypes.string,
+    year: PropTypes.number,
     poster: PropTypes.string
   }
 
@@ -15,7 +15,7 @@ export class Movie extends Component {
     const { id, poster, title, year } = this.props
 
     return (
-      <Link to={`/detail/${id}`} className="card">
+      <Link to={`/movies/${id}`} className="card">
         <div className="card-image">
           <figure className="image">
             <img

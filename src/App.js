@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
 
 import { Home } from './pages/Home'
-import { Detail } from './pages/Detail'
+import { MovieDetail } from './pages/MovieDetail'
 import { NotFound } from './pages/NotFound'
 
 import './App.css';
@@ -14,7 +14,7 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/detail/:movieId' component={Detail} />
+          <Route path='/movies/:movieId' component={MovieDetail} />
           <Route component={NotFound} />
         </Switch>
       </div>
