@@ -5,6 +5,6 @@ export const ButtonBackToHome = () => (
   <Link
     className='button is-info'
     to='/'>
-    Volver a la portada
+    Back to home
   </Link>
 )

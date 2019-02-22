@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+}
+
+.MovieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.MovieList-item {
+  margin-bottom: 24px;
+  width: 30%;
+}
+
+.title-page {
+  padding-top: 25px;
+}
+
+.container {
+  padding-bottom: 30px;
+}
+
+.movie-item {
+  margin-bottom: 30px;
+}
+
+.movie-detail {
+  padding-top: 50px;
+}
+
+.movie-subinfo {
+  text-align: left
+}
+
+.movie-description {
+  padding-top: 10px;
+  text-align: left
+}
+
+.not-found {
+  padding-top: 100px; 
+}
+
+.youtube-video {
+  width: 100%;
+  height: 350px;
+}
+
+.media-content > p {
+  margin-bottom: 0px;
+}
+
+.title.is-4 {
+  margin-bottom: 0px !important; 
+}
