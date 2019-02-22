@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 import { MainContent } from '../components/MainContent'
 
+const Config = require('../config/config.js');
+
 export class CategoryDetail extends Component {
   static propTypes = {
     match: PropTypes.shape({
@@ -21,13 +23,13 @@ export class CategoryDetail extends Component {
 
   _fetchMovie ({ id }) {
     
-    fetch(`http://localhost:3030/categories/${id}`)
+    fetch(Config.API_URL + `/categories/${id}`)
       .then(res => res.json())
       .then(category => {
         this.setState({ category, movies: category.movies })
       })
 
-     fetch(`http://localhost:3030/categories`)
+     fetch(Config.API_URL + `/categories`)
       .then(res => res.json())
       .then(categories => {
         this.setState({ categories })

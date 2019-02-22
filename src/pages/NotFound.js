@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { ButtonBackToHome } from '../components/ButtonBackToHome'
 import { CategoryList } from '../components/CategoryList'
 
+const Config = require('../config/config.js');
+
 export class NotFound extends Component {
 
   state = { 
@@ -10,7 +12,7 @@ export class NotFound extends Component {
 
   componentDidMount () {
 
-    fetch(`http://localhost:3030/categories`)
+    fetch(Config.API_URL + `/categories`)
       .then(res => res.json())
       .then(categories => {
         this.setState({ categories })

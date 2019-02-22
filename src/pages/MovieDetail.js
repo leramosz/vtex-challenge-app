@@ -9,6 +9,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import YouTube from 'react-youtube';
+
+const Config = require('../config/config.js');
   
 export class MovieDetail extends Component {
   static propTypes = {
@@ -26,13 +28,13 @@ export class MovieDetail extends Component {
   }
 
   _fetchMovie ({ id }) {
-    fetch(`http://localhost:3030/movies/${id}`)
+    fetch(Config.API_URL + `/movies/${id}`)
       .then(res => res.json())
       .then(movie => {
         this.setState({ movie })
       })
 
-    fetch(`http://localhost:3030/categories`)
+    fetch(Config.API_URL + `/categories`)
       .then(res => res.json())
       .then(categories => {
         this.setState({ categories })
