@@ -44,7 +44,11 @@ export class CategoryDetail extends Component {
   render () {
   
     return (
-      <MainContent categories={this.state.categories} movies={this.state.movies} title={this.state.category.title} />
+      <MainContent 
+        categories={this.state.categories} 
+        movies={this.state.movies} 
+        title={this.state.category.title} 
+      />
     )
   }
 }
