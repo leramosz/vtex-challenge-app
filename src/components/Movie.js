@@ -10,7 +10,8 @@ export class Movie extends Component {
     id: PropTypes.string,
     title: PropTypes.string,
     year: PropTypes.number,
-    poster: PropTypes.string
+    image: PropTypes.string,
+    rating: PropTypes.number
   }
 
   render () {

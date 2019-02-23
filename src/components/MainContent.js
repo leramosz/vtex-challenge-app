@@ -8,7 +8,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 export class MainContent extends Component {
- 
+  static propTypes = {
+    categories: PropTypes.array,
+    movies: PropTypes.array,
+    title: PropTypes.string
+  }
+
   render () {
 
     const { categories, movies, title } =  this.props

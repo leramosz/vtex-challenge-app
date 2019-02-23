@@ -5,12 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export class Rating extends Component {
   static propTypes = {
-    match: PropTypes.shape({
-      params: PropTypes.object,
-      isExact: PropTypes.bool,
-      path: PropTypes.string,
-      url: PropTypes.string
-    })
+    rating: PropTypes.number
   }
 
   render () {
