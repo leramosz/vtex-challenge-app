@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import { Title } from '../components/Title'
 import { MovieList } from '../components/MovieList'
