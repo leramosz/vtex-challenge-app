@@ -20,7 +20,7 @@ export class CategoryList extends Component {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
           </Nav>
-          <Nav>
+          <Nav className="category-list">
             <CategoryListItem categories={categories} />
           </Nav>
         </Navbar.Collapse>

@@ -1,5 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-export const Title = ({ children }) => (
-  <h1 className="title title-page">{children}</h1>
-)
+export class Title extends Component {
+  static propTypes = {
+    title: PropTypes.string
+  }
+
+  render () {
+    return (
+    	<h1 className="title title-page">{this.props.title}</h1>
+    )
+  }
+}
