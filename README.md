@@ -21,6 +21,6 @@ To build the APP in PROD mode, you can run "npm run build" or using Docker runni
 
 Later, you can go to http://localhost:8000/.
 
-### Running test
+### Running tests
 
 In order to run tests, run "npm test"
