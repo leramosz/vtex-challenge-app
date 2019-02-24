@@ -20,3 +20,7 @@ To build the APP in PROD mode, you can run "npm run build" or using Docker runni
 - docker run -p 8000:80 vtex-app
 
 Later, you can go to http://localhost:8000/.
+
+### Running test
+
+In order to run tests, run "npm test"
