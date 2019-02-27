@@ -5,7 +5,7 @@ import Adapter from "enzyme-adapter-react-16";
 import { Title } from './components/Title'
 import { CategoryList } from './components/CategoryList'
 import { MovieList } from './components/MovieList'
-import { MovieDetail } from './pages/MovieDetail'
+import { MovieInfo } from './components/MovieInfo'
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -59,7 +59,7 @@ describe("Menu component (CategoryList/CategoryListItem)", () => {
 
 });
 
-describe("Movie component (MovieList/MovieListItem)", () => {
+describe("Movie component (MovieList/MovieListItem/MovieInfo)", () => {
   
 	test("List X movies", () => {
 		const wrapper = mount(<MovieList movies={[]} />);
@@ -91,5 +91,20 @@ describe("Movie component (MovieList/MovieListItem)", () => {
 					  .find("p.subtitle").text()).toEqual("1001");
 
 	});
+
+	test("Shows the movie detail", () => {
+		const wrapper = mount(<MovieInfo movie={{}} />);
+		wrapper.setProps({
+			movie: {_id: "1", title: "title 1", year: 1001, image: "image 1", rating: 2, trailer:"trailer 1", duration: 0, description: "description 1"}			
+		});
+		expect(wrapper.find("div.movie-detail")).toHaveLength(1);
+		expect(wrapper.find("div.movie-detail").find("div.youtube-video")).toHaveLength(1);
+		expect(wrapper.find("div.movie-detail").find("div.movie-subinfo").find("h2").text()).toEqual("title 1");
+		expect(wrapper.find("div.movie-detail").find("div.movie-subinfo").find("span.movie-year").text()).toEqual("1001 | ");
+		expect(wrapper.find("div.movie-detail").find("div.movie-subinfo").find("span.movie-duration").text()).toEqual("0 min");
+		expect(wrapper.find("div.movie-detail").find("div.movie-description").text()).toEqual("description 1");
+		expect(wrapper.find("div.movie-detail").find("div.movie-rating")).toHaveLength(1);
+	});
+
 
 });
