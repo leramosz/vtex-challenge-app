@@ -10,6 +10,10 @@ This APP was built using the following technologies:
 
 The APP allows navigating movies and movie categories retrieving the data from an [API](https://github.com/leramosz/vtex-challenge-api) built in Node.js
 
+Automated tests were implementing using the following technology:
+
+- Enzyme
+
 ### Running the APP
 
 The first step is cloning the repository and running "npm install" in the root project folder to install all the dependencies. Then, you can run the application running "npm start" in DEV mode. 
@@ -21,6 +25,6 @@ To build the APP in PROD mode, you can run "npm run build" or using Docker runni
 
 Later, you can go to http://localhost:8000/.
 
-### Running test
+### Testing the APP
 
-In order to run tests, run "npm test"
+To run the automated tests run "npm test"
